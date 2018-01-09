@@ -1,5 +1,17 @@
 <!--pages/all-leagues/all-leagues.wxml-->
 <view class="page">
+  <!-- Page Header -->
+  <view class="page__hd">
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__ft">
+        <navigator url="/pages/new-league/new-league"
+          class="weui-form-preview__btn weui-form-preview__btn_primary"
+          hover-class="weui-form-preview__btn_active">
+          创建比赛
+        </navigator>
+      </view>
+    </view>
+  </view>
   <view class="page__bd">
     <view class="weui-cells__title">正在接受报名的比赛</view>
     <view class="weui-cells weui-cells_after-title">
