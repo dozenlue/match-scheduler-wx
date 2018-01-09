@@ -25,8 +25,34 @@ Page({
         endDate: "Feb 02 2019"
       }
     ],
-    ongoing: [],
-    stopped: []
+    ongoing: [
+      {
+        _id: "4444",
+        name: "dddd",
+        startDate: "Jan 01 2019",
+        endDate: "Feb 02 2019"
+      },
+      {
+        _id: "5555",
+        name: "eeee",
+        startDate: "Jan 01 2019",
+        endDate: "Feb 02 2019"
+      }
+    ],
+    stopped: [
+      {
+        _id: "6666",
+        name: "fffff",
+        startDate: "Jan 01 2019",
+        endDate: "Feb 02 2019"
+      },
+      {
+        _id: "7777",
+        name: "gggg",
+        startDate: "Jan 01 2019",
+        endDate: "Feb 02 2019"
+      }
+    ]
   },
 
   /**
