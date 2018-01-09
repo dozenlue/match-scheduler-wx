@@ -1,0 +1,27 @@
+<!--pages/league-matches-mine/league-matches-mine.wxml-->
+<view class="page">
+  <view class="page__bd">      
+    <view class="weui-form-preview" wx:for="{{matches}}" wx:key="_id">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__label">对局者</view>
+        <view class="weui-form-preview__value_in-hd">{{item.winner.name}}</view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">对局结果</view>
+          <view class="weui-form-preview__value">
+            {{item.winner.name}} 胜 {{item.loser.name}}
+          </view>
+        </view>
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">对局日期</view>
+          <view class="weui-form-preview__value">{{item.claimedDate}}</view>
+        </view>
+      </view>
+      <view class="weui-form-preview__ft">
+        <button class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active">驳回对局结果</button>
+        <button class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">确认对局结果</button>
+      </view>
+    </view>
+  </view>
+</view>

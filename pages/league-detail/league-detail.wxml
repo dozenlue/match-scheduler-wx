@@ -1,0 +1,67 @@
+<!--pages/league-detail/league-detail.wxml-->
+<view class="page">
+  <!-- Page Header -->
+  <view class="page__hd">
+    <view class="page__title">{{leagueInfo.name}}</view>
+    <view class="page__desc">进行中</view>
+  </view>
+
+  <!--Page Body -->
+  <view class="page__bd">
+    <!-- League Info -->
+    <view class="weui-cells__title">比赛信息</view>
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="/pages/league-chart/league-chart"
+          class="weui-cell weui-cell_access"
+          hover-class="weui-cell_active">
+          <view class="weui-cell__bd">比赛排名</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">
+            共{{leagueInfo.players.length}}名选手参赛
+          </view>
+        </navigator>
+        <navigator url="/pages/league-matches/all/all"
+          class="weui-cell weui-cell_access"
+          hover-class="weui-cell_active">
+          <view class="weui-cell__bd">比赛列表</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">
+            已进行16场比赛
+          </view>
+        </navigator>
+    </view>
+
+    <!-- Player Info (if user is a player of this league) -->
+    <view class="weui-cells__title">我的信息</view>
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="/pages/league-matches/need-my-confirm/need-my-confirm"
+          class="weui-cell weui-cell_access"
+          hover-class="weui-cell_active">
+          <view class="weui-cell__bd">待我确认的对局</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">
+            1
+          </view>
+        </navigator>
+        <navigator url="/pages/league-matches/need-opponent-confirm/need-opponent-confirm"
+          class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">待对方确认的对局</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">
+            1
+          </view>
+        </navigator>
+        <navigator url="/pages/league-matches/finished/finished"
+          class="weui-cell weui-cell_access"
+          hover-class="weui-cell_active">
+          <view class="weui-cell__bd">我已经完成的对局</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">
+            3
+          </view>
+        </navigator>
+        <navigator url="/pages/league-matches/not-started/not-started"
+          class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">我未开始的对局</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">
+            2
+          </view>
+        </navigator>
+    </view>
+  </view>
+</view>

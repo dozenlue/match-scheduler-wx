@@ -1,0 +1,20 @@
+<!--pages/league-chart/league-chart.wxml-->
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">名次</view>
+    <view class="th">选手</view>
+    <view class="th ">积分</view>
+  </view>
+  <block wx:for="{{chartData}}" wx:key="{{rank}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.rank}}</view>
+      <view class="td">{{item.player}}</view>
+      <view class="td">{{item.score}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.rank}}</view>
+      <view class="td">{{item.player}}</view>
+      <view class="td">{{item.score}}</view>
+    </view>
+  </block>
+</view>
