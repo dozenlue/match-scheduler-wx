@@ -1,18 +1,61 @@
 // pages/new-league/new-league.js
+var util = require('../../utils/util.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    leagueInfo: {
+
+    },
+  },
+
+  bindNameChange: function (event) {
+    console.log(event.detail.value);
+    this.setData({
+      "leagueInfo.name": { name: event.detail.value }
+    });
+  },
+
+  bindStartDateChange: function (event) {
+    console.log(event.detail.value);
+    this.setData({
+      "leagueInfo.startDate": { name: event.detail.value }
+    });
+  },
+
+  bindEndDateChange: function(event) {
+    console.log(event.detail.value);
+    this.setData({
+      "leagueInfo.endDate": { name: event.detail.value }
+    });
+  },
+
+  bindOK: function(event) {
+    console.log(this.data.leagueInfo);
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var startDate = new Date;
+    var endDate = new Date;
+    var pickerEnd = new Date;
+
+    endDate.setMonth(startDate.getMonth()+1);
+    pickerEnd.setFullYear(startDate.getFullYear() + 2);
+
+    this.setData({
+      leagueInfo: {
+        startDate: util.formatDate(startDate),
+        endDate: util.formatDate(endDate)
+      },
+      pickerStart: util.formatDate(startDate),
+      pickerEnd: util.formatDate(pickerEnd)
+    })  
   },
 
   /**
